@@ -1,0 +1,61 @@
+:root {
+    /* YUJI MAI */
+    
+}
+
+.main-page-start {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    position: relative;
+
+    .portfolio-start {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        height: 290px;
+        overflow: visible;
+        justify-content: space-between;
+        width: 460px;
+        border: 4px solid black;
+        border-left: none;
+        border-right: none;
+        z-index: 1;
+
+        #text-wrapper {
+            transform: scale(1.6);
+        }
+
+        #start-button {
+            margin: auto auto 10px auto;
+            padding: 10px 60px;
+            background-color: black;
+            color: white;
+            border: 3px solid black;
+            font-size: 1.2rem;
+            font-family: 'Yuji Mai';
+            transition: all 0.2s ease;
+            cursor: pointer;
+            z-index: 2;
+            box-shadow: 
+            inset 1px 1px 0px white,
+            inset 2px 2px 0px white,
+            inset -1px -1px 0px white,
+            inset -2px -2px 0px white
+            ;
+
+            &:hover {
+                transform: scale(0.9);
+            }
+        }
+    }
+
+    .background-elements {
+        position: absolute;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        z-index: 0;
+        background-color: rgb(49, 39, 20);
+    }
+}
