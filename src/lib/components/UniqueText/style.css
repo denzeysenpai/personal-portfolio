@@ -3,6 +3,7 @@
     line-height: 2.8rem;
     height: fit-content;
     padding: 0;
+    transition: all 0.5s ease;
 }
 
 .font1 {
@@ -21,6 +22,8 @@
 
 .font4 {
     font-family: 'Jaro';
+    text-decoration: underline;
+    
 }
 
 .font5 {

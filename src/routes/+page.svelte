@@ -16,6 +16,6 @@
         <div class="lower-right-carousel">
 
         </div>
-        <img src={bg} alt="" style="position: absolute; opacity: 0.6; inset: 0; height: 100vh; object-fit: 'cover';">
+        <img src={bg} alt="" style="position: absolute; opacity: 0.6; inset: 0; height: 100vh; object-fit: cover; width: 100vw;">
     </div>
 </section>
