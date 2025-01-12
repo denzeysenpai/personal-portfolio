@@ -1,0 +1,22 @@
+@import "./global.css";
+
+
+.page-content-layout {
+    .header-component {
+
+
+        .logo-placer {
+            * {
+                font-family: "Pt Serif", serif;
+                font-weight: 800;
+                font-size: 2rem;
+                color: black;
+
+            }
+
+            #invert {
+                color: white;
+            }
+        }
+    }
+}
