@@ -6,7 +6,7 @@
 <div class="grid-base">
     {#each pages as page}
     <div class="cell">
-        <page.component/>
+        <page.page/>
     </div>
     {/each}
 </div>
@@ -16,6 +16,7 @@
         display: grid;
         grid-template-columns: 100vw;
         grid-template-rows: 100vh;
+        transform: scale(0.3)
     }
 
     .grid-base>.cell {

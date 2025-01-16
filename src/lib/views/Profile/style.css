@@ -1,1 +1,5 @@
 @import "../../global.css";
+
+.page-base {
+    background-color: rgb(66, 151, 84);
+}
