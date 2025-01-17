@@ -1,5 +1,4 @@
 <script lang="ts">
-    //
     let { pages } = $props();
 </script>
 
@@ -18,7 +17,6 @@
         grid-template-rows: 100vh;
         transform: scale(0.3)
     }
-
     .grid-base>.cell {
         height: 100vh;
         width: 100vw;
