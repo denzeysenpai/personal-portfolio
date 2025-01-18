@@ -1,9 +1,7 @@
 @import "../../global.css";
 
-.page-base {
+.page-base-0-1 {
     background-color: rgb(255, 0, 221);
-}
-
-.page-base {
-    background-color: blue;
+    height: 100vh;
+    width: 100vw;
 }

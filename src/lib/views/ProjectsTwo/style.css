@@ -1,5 +1,7 @@
 @import "../../global.css";
 
-.page-base {
+.page-base-2-1 {
     background-color: blue;
+    height: 100vh;
+    width: 100vw;
 }
