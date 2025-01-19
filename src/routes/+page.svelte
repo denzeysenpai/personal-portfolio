@@ -10,7 +10,6 @@
     import ProjectsTwo from "$lib/views/ProjectsTwo/ProjectsTwo.svelte";
     import Welcome from "$lib/views/Welcome/Welcome.svelte";
 </script>
-
   <GridBase pages={[
     { x: 0, y: 0, page: Welcome },
     { x: 1, y: 0, page: Profile },

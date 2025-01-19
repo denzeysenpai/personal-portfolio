@@ -28,6 +28,4 @@
         display: flex;
         overflow: hidden;
     }
-
-    
 </style>
