@@ -1,10 +1,18 @@
 <script lang="ts">
+  import { Route, type Routes } from "$lib/state/navigation.svelte";
+
     let { pages } = $props();
+    let inView : Routes | null = $state<Routes | null>(null)
+
+    $effect(()=> {
+        inView = Route.Current
+    })
 </script>
 
-<div class="grid-base">
+<!-- THE IDEA IS TO NAVIGATE USING CSS HEHE -->
+<div class="grid-base{inView ?? ""}">
     {#each pages as page}
-    <div class="cell">
+    <div class="cell" id={page.Route}>
         <page.page/>
     </div>
     {/each}
