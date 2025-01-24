@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Route, type Routes } from "$lib/state/navigation.svelte";
+  import { Route, Routes } from "$lib/state/navigation.svelte";
 
     let { pages } = $props();
     let inView : Routes | null = $state<Routes | null>(null)
@@ -10,7 +10,10 @@
 </script>
 
 <!-- THE IDEA IS TO NAVIGATE USING CSS HEHE -->
-<div class="grid-base{inView ?? ""}">
+<div 
+class="grid-base{" " + Route.PositionViewTo(Route.Current ?? Routes.WelcomePage)}" 
+id="grid-base-component" 
+style="transition: all 0.4s ease; ">
     {#each pages as page}
     <div class="cell" id={page.Route}>
         <page.page/>
@@ -35,5 +38,34 @@
         width: 100vw;
         display: flex;
         overflow: hidden;
+    }
+
+    .grid-base.wp {
+        left: 0vw; 
+        top: 0vh;
+    }
+    .grid-base.mpp {
+        left: -100vw; top: 0vh;
+    }
+    .grid-base.pop{
+        left: -200vw; top: 0vh;
+    }
+    .grid-base.ip{
+        left: 0vw; top: -100vh;
+    }
+    .grid-base.mp{
+        left: -100vw; top: -100vh;
+    }
+    .grid-base.ptp{
+        left: -200vw; top: -100vh;
+    }
+    .grid-base.op{
+        left: 0vw; top: -200vh;
+    }
+    .grid-base.cfp{
+        left: -100vw; top: -200vh;
+    }
+    .grid-base.ptp2{
+        left: -200vw; top: -200vh;
     }
 </style>

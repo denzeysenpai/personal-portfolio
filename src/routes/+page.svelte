@@ -1,5 +1,6 @@
 <script lang="ts">
     import GridBase from "$lib/components/GridBase/GridBase.svelte";
+  import Navigator from "$lib/components/Navigator/Navigator.svelte";
     import { Routes } from "$lib/state/navigation.svelte";
     import ContactForm from "$lib/views/ContactForm/ContactForm.svelte";
     import Introduction from "$lib/views/Introduction/Introduction.svelte";
@@ -24,3 +25,4 @@
     {  x: 2, y: 2, page: ProjectsThree, route: Routes.ProjectsThreePage }
   ]}
 />
+<Navigator/>

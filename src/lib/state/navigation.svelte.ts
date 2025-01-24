@@ -13,6 +13,8 @@ export enum Routes {
     ProjectsThreePage = "00022"
 }
 
+const RouteAction: Map<Routes, string> = new Map();
+
 const cookieKey : string = "current_pageRoute_portfolio"
 
 function SetCookie(key : string, value: Routes, hours : number) {
@@ -46,6 +48,16 @@ function GetCookie(key : string) {
 function Navigation() {
     let currentRoute : Routes | null = $state<Routes | null>(null)
     const key : string = "mark solante's portfolio key"
+    RouteAction.set(Routes.WelcomePage, "wp")
+    RouteAction.set(Routes.MyProfilePage, "mpp")
+    RouteAction.set(Routes.ProjectsOnePage, "pop")
+    RouteAction.set(Routes.IntroductionPage, "ip")
+    RouteAction.set(Routes.MainPage, "mp")
+    RouteAction.set(Routes.ProjectsTwoPage, "ptp")
+    RouteAction.set(Routes.OthersPage, "op")
+    RouteAction.set(Routes.ContactFormPage, "cfp")
+    RouteAction.set(Routes.ProjectsThreePage, "ptp2")
+
     return {
 
         // Sets the new route
@@ -67,6 +79,10 @@ function Navigation() {
 
         get Key() {
             return key
+        },
+
+        PositionViewTo(route : Routes) : string {
+          return RouteAction.get(route) ?? "";
         }
     }
 }
