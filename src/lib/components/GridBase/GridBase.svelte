@@ -1,17 +1,25 @@
 <script lang="ts">
   import { Route, Routes } from "$lib/state/navigation.svelte";
+  import { onMount } from "svelte";
 
     let { pages } = $props();
-    let inView : Routes | null = $state<Routes | null>(null)
+    let inView : string = $state<string>(null)
+    let loadIn : boolean = $state(false)
 
+    onMount(() => {
+        setTimeout(() => {
+            loadIn = true;
+        }, 1)
+    })
     $effect(()=> {
-        inView = Route.Current
+        inView = Route.PositionViewTo(Route.Current ?? Routes.WelcomePage)
     })
 </script>
 
+{#if loadIn}
 <!-- THE IDEA IS TO NAVIGATE USING CSS HEHE -->
 <div 
-class="grid-base{" " + Route.PositionViewTo(Route.Current ?? Routes.WelcomePage)}" 
+class="grid-base{" " + inView}" 
 id="grid-base-component" 
 style="transition: all 0.4s ease; ">
     {#each pages as page}
@@ -20,6 +28,7 @@ style="transition: all 0.4s ease; ">
     </div>
     {/each}
 </div>
+{/if}
 
 <style>
     .grid-base {

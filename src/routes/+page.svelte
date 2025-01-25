@@ -1,7 +1,7 @@
 <script lang="ts">
     import GridBase from "$lib/components/GridBase/GridBase.svelte";
   import Navigator from "$lib/components/Navigator/Navigator.svelte";
-    import { Routes } from "$lib/state/navigation.svelte";
+    import { Route, Routes } from "$lib/state/navigation.svelte";
     import ContactForm from "$lib/views/ContactForm/ContactForm.svelte";
     import Introduction from "$lib/views/Introduction/Introduction.svelte";
     import MainPage from "$lib/views/MainPage/MainPage.svelte";
@@ -11,6 +11,11 @@
     import ProjectsThree from "$lib/views/ProjectsThree/ProjectsThree.svelte";
     import ProjectsTwo from "$lib/views/ProjectsTwo/ProjectsTwo.svelte";
     import Welcome from "$lib/views/Welcome/Welcome.svelte";
+  import { onMount } from "svelte";
+
+    // onMount(() => {
+    //   Route.CheckForHistory()
+    // })
 </script>
 
   <GridBase pages={[
