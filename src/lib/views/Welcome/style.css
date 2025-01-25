@@ -1,7 +1,122 @@
 @import "../../global.css";
 
 .page-base-0-0 {
-    background-color: rgb(163, 95, 31);
+    background-color: white;
     height: 100vh;
     width: 100vw;
+    .comic-page>.welcome-page{
+        position: relative;
+        height: 100%;
+        width: 100%;
+        padding: 0px;
+        display: flex;
+
+        .background {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            user-select: none;
+            z-index: 1;
+            inset: 0;
+            object-fit: cover;
+        }
+
+        .content{
+            z-index: 2;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            h1 {
+                font-family: ComicsDeluxe;
+                -webkit-text-stroke: 6px black;
+                /* text-shadow: 10px 10px 0px black; */
+                transform: rotate(-5deg);
+                background: -webkit-linear-gradient(rgb(255, 191, 0),orange, rgb(255, 106, 0), rgb(207, 62, 22));
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                z-index: 2;
+                animation-name: popIn;
+                animation-duration: 0.45s;
+
+                #w{
+                    font-size: 11rem;
+                }
+                #e1{
+                    font-size: 8rem;
+                }
+                #l{
+                    font-size: 8rem;
+                }
+                #c{
+                    font-size: 7rem;
+                }
+                #o{
+                    font-size: 7rem;
+                }
+                #m{
+                    font-size: 8rem;
+                }
+                #e2{
+                    font-size: 8rem;
+                }
+                #bang{
+                    font-size: 11rem;
+                }
+            }
+            #shadow {
+                text-shadow: 10px 10px 0px black;
+                position: absolute;
+                inset: 0;
+                z-index: 0;
+                -webkit-text-fill-color: black;
+            }
+            .go-to-button {
+                font-size: 1.6rem;
+                margin: auto;
+                padding: 20px 50px;
+                transform: skew(-10deg);
+                position: relative;
+                background-image: linear-gradient(rgb(255, 255, 255), rgb(165, 165, 165));
+                border: 8px solid black;
+                transition: all 0.3s ease;
+                box-shadow: 10px 10px 0px black;
+                cursor: pointer;
+                animation-name: slideIn;
+                animation-duration: 0.85s;
+                #inner-text {
+                    transform: skew(30deg);
+                    width: fit-content;
+                    font-family: SonicsComics;
+                }
+            }
+            .go-to-button:hover{
+                background-image: linear-gradient(rgb(165, 165, 165),rgb(255, 255, 255));
+                transition: all 0.3s ease;
+            }
+        }
+    }
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0) rotate(2deg);
+    } 70% {
+        transform: scale(1.2) rotate(-8deg);
+    } 100% {
+        transform: scale(1) rotate(-5deg);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-50px) skew(-10deg);
+        opacity: 0;
+    } 70% {
+        transform: translateX(30px) skew(-10deg);
+        opacity: 1;
+    } 100% {
+        transform: translateX(0px) skew(-10deg);
+        opacity: 1;
+    }
 }

@@ -1,7 +1,10 @@
 <script lang="ts">
-    import "./style.css";
+    import ComicPage from "$lib/components/ComicPage/ComicPage.svelte";
+import "./style.css";
 </script>
 
 <div class="page-base-2-2">
-    <h1>Projects 3</h1>
+    <ComicPage id="Third Projects Page">
+        <h1>Projects 3</h1>
+    </ComicPage>
 </div>

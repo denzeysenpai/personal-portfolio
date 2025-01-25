@@ -1,3 +1,23 @@
 :root {
     --color: red;
 }
+
+@font-face {
+  font-family: HoustonComics;
+  src: url("./assets/fonts/HoustonComicsPersonalUse-6Yea1.ttf");
+}
+
+@font-face {
+  font-family: ComicsDeluxe;
+  src: url("./assets/fonts/ComicsDeluxe-p7W4y.ttf");
+}
+
+@font-face {
+  font-family: SonicsComics;
+  src: url("./assets/fonts/SonicComics-LzVg.ttf");
+}
+
+@font-face {
+  font-family: VictoryComics;
+  src: url("./assets/fonts/VictoryComics-YqApv.otf");
+}
