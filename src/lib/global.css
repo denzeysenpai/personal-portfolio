@@ -21,3 +21,8 @@
   font-family: VictoryComics;
   src: url("./assets/fonts/VictoryComics-YqApv.otf");
 }
+
+@font-face {
+  font-family: LearningCursive;
+  src: url("./assets/fonts/learning_curve_starts_regular_ot_tt.ttf");
+}

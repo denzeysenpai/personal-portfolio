@@ -2,6 +2,7 @@
     import ComicPage from "$lib/components/ComicPage/ComicPage.svelte";
     import BG from "$lib/assets/welcome-page/WelcomePageBaseBackground.png"
     import "./style.css";
+  import { Route, Routes } from "$lib/state/navigation.svelte";
 </script>
 
 <div class="page-base-0-0">
@@ -31,7 +32,9 @@
                     </h1>
                 </div>
                 
-                <button class="go-to-button">
+                <button class="go-to-button" onclick={()=>{
+                    Route.FlyTo(Routes.MainPage)
+                }}>
                     <span id="inner-text">
                         proceed to main page...
                     </span>

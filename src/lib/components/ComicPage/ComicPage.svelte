@@ -16,6 +16,6 @@
         border-radius: 4px;
         background-color: gray;
         transition: all 0.5s ease;
-        overflow: hidden;
+        /* overflow: hidden; */
     }
 </style>
