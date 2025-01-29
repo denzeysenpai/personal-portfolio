@@ -3,15 +3,16 @@
     import PanelOneBG from "$lib/assets/WomanInShades.png"
     import "./style.css";
   import { Route, Routes } from "$lib/state/navigation.svelte";
+  import ProjectsOne from "../ProjectsOne/ProjectsOne.svelte";
 
     function ToggleToActive(id : string) {
-        const element = document.querySelector("#"+id) as HTMLDivElement;
+        const element = document.querySelector("#"+id)
         if(element) {
             if(!element.classList.contains('active')) element.classList.toggle('active')
         }
     }
     function ToggleToInactive(id : string) {
-        const element = document.querySelector("#"+id) as HTMLDivElement;
+        const element = document.querySelector("#"+id)
         if(element) {
             if(element.classList.contains('active')) element.classList.toggle('active')
         }
@@ -38,7 +39,18 @@
                 </button>
             </div>
             <div class="panel-two" id="panel-two">
-                <button>MY PROJECTS</button>
+                <button draggable="false" onmouseenter={()=>{
+                    ToggleToActive('background')
+                }} onmouseleave={()=>{
+                    ToggleToInactive('background')
+                }} onclick={()=>{
+                    Route.FlyTo(Routes.ProjectsOnePage)
+                }}>
+                    <p class="text">View my projects here!</p>
+                    <img src="/src/lib/assets/WhiteBang.png" alt="" srcset="" draggable="false">
+                </button>
+                <img src="/src/lib/assets/—Pngtree—square-halftone-dot-design_6259338.png" alt="" class="pattern">
+                <img src="/src/lib/assets/GuyInShades.png" alt="" id="background">
             </div>
         </div>
     </ComicPage>
