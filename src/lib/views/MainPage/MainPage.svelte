@@ -18,7 +18,6 @@
         }
     }
 </script>
-
 <div class="page-base-1-1">
     <ComicPage id="Main Page">
         <span class="diagonal-bar-one"></span>
