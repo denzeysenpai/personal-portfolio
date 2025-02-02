@@ -46,6 +46,7 @@ function GetCookie(key: string): string | Routes {
 
 function Navigation() {
   let currentRoute: Routes | null = $state<Routes | null>(null);
+  let isMoving : boolean = $state<boolean>(false)
   const key: string = "mark solante's portfolio key";
   const prefix: string = "/?page-view=";
   RouteAction.set(Routes.WelcomePage, "wp");
@@ -64,11 +65,20 @@ function Navigation() {
       goto(prefix + route + "#" + btoa(key + route));
       SetCookie(cookieKey, route, 2);
       currentRoute = route;
+      isMoving = true
     },
 
     // This might not get implemented, but I'll leave it here.
     DeleteRouteCookie() {
       DeleteCookie(cookieKey);
+    },
+
+    StopMoving() {
+      isMoving = false
+    },
+
+    get isMoving() {
+      return isMoving
     },
 
     CheckForHistory() {
