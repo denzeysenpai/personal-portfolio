@@ -20,7 +20,7 @@
 {#if loadIn}
   <!-- THE IDEA IS TO NAVIGATE USING CSS HEHE -->
    {#if Route.isMoving}
-    <div class="vignette"></div>
+    <!-- <div class="vignette"></div> -->
    {/if}
   <div class="grid-base{' ' + inView}" id="grid-base-component">
     {#each pages as page}
